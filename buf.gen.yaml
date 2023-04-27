@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  - name: go
+    out: proto/helloworld/v1
+    opt:
+      - paths=source_relative
+  - name: go-grpc
+    out: proto/helloworld/v1
+    opt:
+      - paths=source_relative
+  - name: grpc-gateway
+    out: proto/helloworld/v1
+    opt:
+      - paths=source_relative

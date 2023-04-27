@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package helloworld.v1;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/iamrajiv/opentelemetry-grpc-gateway-boilerplate/helloworld";
+
+service GreeterService {
+  rpc SayHello(GreeterServiceSayHelloRequest) returns (GreeterServiceSayHelloResponse) {
+    option (google.api.http) = {
+      post: "/v1/helloworld"
+      body: "*"
+    };
+  }
+}
+
+message GreeterServiceSayHelloRequest {
+  string name = 1;
+}
+
+message GreeterServiceSayHelloResponse {
+  string message = 1;
+}

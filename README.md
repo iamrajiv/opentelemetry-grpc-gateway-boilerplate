@@ -13,7 +13,23 @@ Boilerplate for gRPC-Gateway with OpenTelemetry instrumentation
 
 ## About
 
-This is an example gRPC and gRPC-Gateway service that implements a "Hello World" RPC and REST API. The service is written in Go and uses the gRPC framework and the gRPC-Gateway library to provide a gRPC service and a RESTful API that maps to the same underlying gRPC service.
+This repository contains a boilerplate project that demonstrates how to set up an OpenTelemetry-enabled gRPC-Gateway REST server. The gRPC server implements a simple `SayHello` method that returns a greeting message to the client.
+
+The project uses the following tools and technologies:
+
+- [OpenTelemetry](https://opentelemetry.io/) for distributed tracing
+- [gRPC](https://grpc.io/) for building high-performance, language-agnostic RPC services
+- [gRPC-Gateway](https://github.com/grpc-ecosystem/grpc-gateway) for generating a reverse-proxy server that translates RESTful JSON API requests into gRPC calls
+
+The code is written in Go and uses the following Go modules:
+
+- `google.golang.org/grpc`
+- `github.com/grpc-ecosystem/grpc-gateway/v2/runtime`
+- `go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc`
+- `go.opentelemetry.io/otel`
+- `go.opentelemetry.io/otel/exporters/stdout/stdouttrace`
+- `go.opentelemetry.io/otel/propagation`
+- `go.opentelemetry.io/otel/sdk/trace`
 
 #### Folder structure:
 
